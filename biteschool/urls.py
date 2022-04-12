@@ -22,6 +22,11 @@ from django.views.static import serve
 from django.conf import settings
 from Files import views
 
+
+
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('' ,views.homepage, name='home_return'),
@@ -33,9 +38,9 @@ urlpatterns = [
     path('book1/' ,views.book1page, name='book1_return'),
     path('Notes/' ,views.Notespage, name='Notes_return'),    
     path('practicals/' ,views.practicalspage, name='practicals_return'),     
-    re_path(r'^download/(?P<path>.*)$',serve,{'document_root' :settings.MEDIA_ROOT}),
-]                                  
+    re_path(r'^download/(?P<path>.*)$',serve,{'document_root':MEDIA_ROOT}),
+]
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+    urlpatterns +=  static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    urlpatterns +=  static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
     
