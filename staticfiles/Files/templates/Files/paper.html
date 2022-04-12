@@ -1,0 +1,54 @@
+{% extends 'Files/base.html' %}
+{% block content %}
+
+<section id="pastpapers" class="container mb-4" >
+       <center><h3>FORM 5 - 6</h3></center> 
+    <div id="PAPERS">
+        <div class="advancedmath">
+            <div id="title">Advanced math</div>
+            <p>ACSEE: Paper1</p>
+            {% for post in File %}
+            <a href="{{post.adminupload.url}}" >{{post.Year_Of_the_paper}}</a> ,
+            {% endfor %}
+
+            <p>ACSEE:paper2</p>
+            {% for post in File2 %}
+            <a href="{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
+            {% endfor %}
+        </div>
+
+        <div class="Physics">
+            <div id="title2">physics</div>
+            <p>ACSEE: Paper1</p>
+            {% for post in File3 %}
+            <a href="{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
+            {% endfor %}
+            
+       
+            <p>ACSEE:paper2</p>
+            {% for post in File4 %}
+            <a href="{{post.adminupload.url}}" download = "{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
+            {% endfor %}
+          
+        </div>
+
+
+        <div class="Chemistry">
+            <div id="title3">chemistry</div>
+            <p>ACSEE: Paper1</p>
+            {% for post in File5 %}
+            <a href="{{post.adminupload.url}}" download = "{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
+            {% endfor %}
+
+            <p>ACSEE: paper2</p>
+            {% for post in File6 %}
+            <a href="{{post.adminupload.url}}" download = "{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
+            {% endfor %}
+            
+        </div>
+
+    </div>   
+</section>
+<center><p class="p2 container">&copy; Copyright {%now "Y" %}</p></center>
+
+{% endblock content %}
