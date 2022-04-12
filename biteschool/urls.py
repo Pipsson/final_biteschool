@@ -38,7 +38,7 @@ urlpatterns = [
     path('book1/' ,views.book1page, name='book1_return'),
     path('Notes/' ,views.Notespage, name='Notes_return'),    
     path('practicals/' ,views.practicalspage, name='practicals_return'),     
-    re_path(r'^download/(?P<path>.*)$',serve,{'document_root':MEDIA_ROOT}),
+    
 ]
 if settings.DEBUG:
     urlpatterns +=  static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
