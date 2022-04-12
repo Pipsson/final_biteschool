@@ -1,1 +1,1 @@
-web: gunicorn biteschool.wsgi --logfile-
+web: gunicorn biteschool.wsgi 
