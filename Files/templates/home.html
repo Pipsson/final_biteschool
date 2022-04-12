@@ -1,0 +1,169 @@
+{% extends 'Files/base.html' %}
+{% block content %}
+
+<!-- Slideshow container -->
+<div id="carouselExampleSlidesOnly" class="carousel slide P-200 container" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div  class="carousel-item active  ">
+        <img src="/static/IMG/Pic1.jpg" class="d-block w-100" >
+      </div>
+      <div class="carousel-item">
+        <img src="/static/IMG/Pic3.png" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/IMG/Pic4.jpg" class="d-block w-100" >
+      </div>
+      <div class="carousel-item">
+        <img src="/static/IMG/Pic2.jpg" class="d-block w-100" >
+      </div> 
+      <div class="carousel-item">
+        <img src="/static/IMG/Pic5.jpg" class="d-block w-100" >
+      </div>
+    </div>
+  </div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<!-- end of navbar -->
+<!-- end of Home sn.ectio -->
+
+
+<!-- About Section
+   ================================================== -->
+<section id="about" class="p2 mt-3 container mb-5 " >
+    <div id="aboutme" class="mt-1 me-3">
+            <h2>About Us</h2>
+            
+            <p>Founded in 2018, Biteschool has been helping students in Tanzania to receive a better education. This site is an
+                effort to provide resources for any and
+                all advanced students in Tanzania to help them in their studies. It is also for teachers looking for much-needed
+                resources to aid
+                in their teaching. For more information about Bite school, visit our website.
+            
+                Our mission is…<br><br>
+            
+                <i> <b>“We light up your Future.”</b> </i> 
+            </p>
+    </div>
+    <div id="details">
+       <h4>Contact</h4>
+        <p>name : Teacher Williambituro</p>
+        <p>phone: +255756236659</p>
+        <p>email: williambituro@gmail.com</p>
+    </div>
+</section><!-- end of About section -->
+
+<!-- Past Papers Section
+   ================================================== -->
+<section id="pastpapers" class="p2 container mb-5">
+    <h3>Past Papers</h3>
+    <a href=" {% url 'paper_return' %} ">form5-form6</a>
+</section  ><!-- end of Past Paper section -->
+
+<!-- Books & Notes Section
+   ================================================== -->
+<section id="Books & Notes" class="p2 container mb-5">
+      <h3>Books & Notes</h3>
+      <ul>
+     <li>  <a href="{% url 'book_return' %}">Form 5</a></li>
+     <li>  <a href="{% url 'book1_return' %}">Form 6</a></li>
+      </ul>
+</section><!-- end of Books & Notes section -->
+
+<!-- practical Section
+   ================================================== -->
+   <section id="pastpaper" class="container mb-4">
+    <h3>Practicals</h3>
+    <a href=" {% url 'practicals_return' %} ">Form 6</a>
+  </section>
+
+<!-- end of practicals section -->
+
+ <!-- Useful websites Section
+           ================================================== -->
+    <section id="Useful Websites" class="p1 container mb-4">
+            <h3>Useful Websites</h3>
+            <table class="table table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><a href="https://www.youtube.com/channel/UCexW6DWc1ImHsQmHbyX9v4A"><u>biteschool</u></a></td>
+                        <td>Lectures</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><a href="https://Khanacademy.org"><u>khan Academy</u></a></td>
+                        <td>Videos for many subject</td>
+                    </tr>
+                  
+            </table>
+           
+    </section><!-- useful website section -->
+<!---this-->
+    <!-- contact Section
+       ================================================== -->
+<section id="contact" class="p1 container mb-5">
+    <div class="container mb-4">
+        <p><h2>Contact</h2></p>
+        <form action="#" method="POST" class="was-validated" >
+          {% csrf_token %}
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="name" placeholder="Your name.." required >
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" id="email" name="email" placeholder="email@gmail.com.." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="message">Message</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="message" name="message" placeholder="Write comment.." style="height:200px" required></textarea>
+                </div>
+            </div>
+            <div class="text-center ">
+              <button  type="submit" class="btn btn-primary " > submit</button>
+            </div>
+        </form>
+    </div>
+    
+</section><!-- end of contact section -->
+
+<!-- footer -->
+<section id="footer" class="container mb-5">
+    <footer> 
+            <center>
+            <a href="https://web.facebook.com/william.bituro"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/williambituro/"><i class="fa fa-instagram"></i></a>
+                <p class="p2">&copy; Copyright {%now "Y" %}</p>
+            </center>
+    </footer>
+</section>
+<!-- end of footer -->
+    
+
+{% endblock content %}

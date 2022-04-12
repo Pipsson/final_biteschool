@@ -1,0 +1,37 @@
+{% extends 'Files/base.html' %}
+{% block content %}
+   
+
+
+ <section id="book" class="container mb-4">
+        <h3>Form 6</h3>
+     <div id="BOOK">
+            <h3>PRACTICALS</h3>
+
+            <div class="Physics">
+                <div id="title2">physics</div>
+                {% for post in File2 %} 
+                <a href="{{post.adminupload.url}}" download ="{{post.adminupload.url}}">{{post.Name_of_the_practical}}</a> ,
+                {% endfor %}
+
+
+            </div>
+
+
+            <div class="Chemistry">
+                <div id="title3">chemistry</div>
+                {% for post in File1 %} 
+                  <a href="{{post.adminupload.url}}" download= "{{post.adminupload.url}}">{{post.Name_of_the_practical}}</a>, <br>
+    
+                {% endfor %}
+            
+            
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <center>
+    <p class="p2 container">&copy; Copyright {%now "Y" %}</p>
+     </center>
+{% endblock content %}

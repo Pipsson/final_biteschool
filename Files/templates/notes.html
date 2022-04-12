@@ -1,0 +1,13 @@
+{% extends 'Files/base.html' %}
+{% block content %}
+ <!-- Books & Notes Section
+       ================================================== -->
+       <section id="Books & Notes" class="p2 container mb-4">
+        <h3>Books & Notes</h3>
+        <ul>
+            <li> <a href="{% url 'book_return' %}">Form 5</a></li>
+            <li> <a href="{% url 'book1_return' %}">Form 6</a></li>
+        </ul>
+    </section><!-- end of Books & Notes section -->
+    <p class="p2 container">&copy; Copyright {%now "Y" %}</p>
+{% endblock content %}
