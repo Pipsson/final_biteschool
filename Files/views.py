@@ -5,18 +5,18 @@ from Files.models import Advanced_math1,Advanced_math2,Physics1, Physics2,Chemis
 import os
 from urllib import response
 
- 
+
 # Create your views here.
-def download(request,path):
-    file_path = os.path.join(settings.MEDIA_ROOT,path)
+#def download(request,path):
+#   file_path = os.path.join(settings.MEDIA_ROOT,path)
     
-    if os.path.exists(file_path):
-        with open(file_path, 'rb') as fh:
-            response = HttpResponse(fh.read(), content_type = "application/adminupload")
-            response ['content - Disposition'] = 'inline; filename =' + os.path.basename(file_path)
-            return response
+ #   if os.path.exists(file_path):
+  #      with open(file_path, 'rb') as fh:
+   #         response = HttpResponse(fh.read(), content_type = "application/adminupload")
+    #        response ['content - Disposition'] = 'inline; filename =' + os.path.basename(file_path)
+     #       return response
         
-    raise Http404
+   # raise Http404
 
 
 

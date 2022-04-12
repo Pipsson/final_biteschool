@@ -8,12 +8,12 @@
             <div id="title">Advanced math</div>
             <p>ACSEE: Paper1</p>
             {% for post in File %}
-            <a href="{{post.adminupload.url}}" download = "{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
+            <a href="{{post.adminupload.url}}" >{{post.Year_Of_the_paper}}</a> ,
             {% endfor %}
 
             <p>ACSEE:paper2</p>
             {% for post in File2 %}
-            <a href="{{post.adminupload.url}}" download = "{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
+            <a href="{{post.adminupload.url}}">{{post.Year_Of_the_paper}}</a> ,
             {% endfor %}
         </div>
 
