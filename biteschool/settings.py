@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-c^6-nma=q%n@(4rycthjuuwd*6#6%l427z!42e58#)5vw7gkqf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["bitesschool.herokuapp.com" , '127.0.0.1']
 
 
 # Application definition
