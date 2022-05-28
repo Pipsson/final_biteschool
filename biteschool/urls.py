@@ -38,6 +38,7 @@ urlpatterns = [
     path('book1/' ,views.book1page, name='book1_return'),
     path('Notes/' ,views.Notespage, name='Notes_return'),    
     path('practicals/' ,views.practicalspage, name='practicals_return'),     
+    path('privacy/' ,views.myPrivacy, name='privacy_return'),
     
 ]
 if settings.DEBUG:

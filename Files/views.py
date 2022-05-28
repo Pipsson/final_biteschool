@@ -98,3 +98,6 @@ def practicalspage(request):
 def Notespage(request):
     return render(request ,'Files/Notes.html')
 
+def myPrivacy(request):
+    return render(request ,'Files/privacy.html')
+
